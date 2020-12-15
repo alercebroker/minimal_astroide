@@ -1,0 +1,23 @@
+plugins {
+    id 'scala'
+    id 'com.github.johnrengelman.shadow' version '1.2.3'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile 'org.scala-lang:scala-library:2.11.8'
+
+    compile fileTree(dir: 'libs', include: '**/*.jar')
+
+    compile 'org.apache.spark:spark-core_2.11:2.4.4'
+    compile 'org.apache.spark:spark-sql_2.11:2.4.4'
+
+}
+
+shadowJar {
+    zip64 = true
+}
