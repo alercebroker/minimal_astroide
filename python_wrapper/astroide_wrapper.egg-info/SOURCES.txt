@@ -1,6 +1,0 @@
-setup.py
-astroide_wrapper/__init__.py
-astroide_wrapper.egg-info/PKG-INFO
-astroide_wrapper.egg-info/SOURCES.txt
-astroide_wrapper.egg-info/dependency_links.txt
-astroide_wrapper.egg-info/top_level.txt
