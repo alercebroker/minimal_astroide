@@ -24,9 +24,26 @@ spark.jars                      PATH/minimal_astroide.jar,PATH/healpix-1.0.jar
 
 (3) **Usage**
 
-- Healpix Partitioner:
+```
+from pyspark.sql.session import SparkSession
 
-- Xmatcher:
+#init
+spark= SparkSession.builder.getOrCreate()
+api = AstroideAPI()
+
+#load
+catalogx = spark.read.load("xxx")
+allwise = spark.read.load("s3a://allwise/*")
+
+#create helpix index
+healpix_level = 12
+df_healpix = api.create_healpix_index(df,12,'ra','dec')
+
+#perform crossmatch
+radius = 1.0/3600. #arc-sec
+best = True #only best match
+result = api.xmatch(allwise,catalogx,healpix_level,radius,best)
+```
 
 (4) **Catalogs**
 
