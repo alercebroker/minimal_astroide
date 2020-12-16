@@ -24,7 +24,8 @@ spark.jars                      PATH/minimal_astroide.jar,PATH/healpix-1.0.jar
 
 (3) **Usage**
 
-```
+```python
+
 from pyspark.sql.session import SparkSession
 
 #init
