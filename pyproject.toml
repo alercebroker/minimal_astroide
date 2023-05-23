@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "minimal-astroide"
+version = "0.1.0"
+description = ""
+authors = ["Alberto Moya Loustaunau <albertomoya87@gmail.com>"]
+readme = "README.md"
+packages = [{include = "minimal_astroide"}]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.11"
+pyspark = "*"
+
+[tool.poetry.dev-dependencies]
+pylint = "*"
+pytest = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
