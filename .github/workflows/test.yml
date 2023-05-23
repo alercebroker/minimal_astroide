@@ -1,12 +1,9 @@
-name: unittests
+name: tests
 
 on:
   pull_request:
     branches: 
       - main
-  push:
-    branches:
-      - upgrade_dependencies
 
 jobs:
   test:
