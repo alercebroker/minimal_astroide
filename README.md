@@ -6,15 +6,15 @@ It contains a simplified and minimal version of **Astroide** (https://github.com
 
 (0) **Requirements**
 
-- Spark 2.4.5
-- Python 3.7
+- Python 3.7+
+- Spark 3.3+
 
 (1) **Installation**
 
 - Compile Scala code:
 ```
-$>gradle build
-$>cp build/minimal_astroide.jar TARGET_PATH
+$>./gradlew clean build
+$>cp build/minimal_astroide-1.0.1.jar TARGET_PATH
 $>cp libs/healpix-1.0.jar TARGET_PATH
 ```
 
